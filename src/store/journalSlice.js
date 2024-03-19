@@ -1,12 +1,12 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
-
+import formatedDateFromLocalStorage from "../Components/functions/formatedDateFromLocalStorage";
 
 export const getLink = createAsyncThunk(
     'schedules/getLink',
     async function (_, {rejectWithValue}) {
         try {
-            const response = await axios.get('https://65e5ffb1d7f0758a76e7ec04.mockapi.io/linkAPI')
+            const response = await axios.get('https://65f9c09f3909a9a65b194987.mockapi.io/data/linkAPI')
             return response.data[0]['link']
         } catch (error) {
             return rejectWithValue(error.message)
@@ -48,7 +48,7 @@ const dataSlice = createSlice({
         status: null,
         error: null,
         journalLink: null,
-        subject: null,
+        date: null,
     },
     reducers: {
         getJournalBySubject(state, action) {
@@ -59,6 +59,9 @@ const dataSlice = createSlice({
             newData['Subj'] = action.payload.id - 1
             state.journal[action.payload.monthID].push(newData)
             state.status = true
+            localStorage.setItem('data', JSON.stringify(state.journal))
+            state.date = formatedDateFromLocalStorage()
+
         },
         updateReducer(state, action) {
             let newData = action.payload.dataSend
@@ -67,12 +70,16 @@ const dataSlice = createSlice({
             let indexChanged = state.journal[action.payload.monthID].indexOf(filteredData.find(element => element['Дата'] === newData['Дата']))
             state.journal[action.payload.monthID][indexChanged] = newData
             state.status = true
+            localStorage.setItem('data', JSON.stringify(state.journal))
+            state.date = formatedDateFromLocalStorage()
         },
         editStatus(state) {
             state.status = !state.status
         },
-        setSubject(state, action) {
-            state.subjecy = action.payload
+        setData(state, action) {
+            state.journal = action.payload
+            state.date = formatedDateFromLocalStorage()
+            state.status = true
         }
     },
     extraReducers(builder) {
@@ -83,6 +90,8 @@ const dataSlice = createSlice({
             .addCase(getData.fulfilled, (state, action) => {
                 state.status = true
                 state.journal = action.payload
+                state.date = formatedDateFromLocalStorage()
+                localStorage.setItem('data', JSON.stringify(action.payload))
             })
             .addCase(getData.rejected, (state, action) => {
                 state.status = true
@@ -92,8 +101,10 @@ const dataSlice = createSlice({
                 state.status = false
             })
             .addCase(getLink.fulfilled, (state, action) => {
-                state.status = true
                 state.journalLink = action.payload
+                const currentDateTimestamp = new Date();
+                state.date = formatedDateFromLocalStorage()
+                localStorage.setItem('date', currentDateTimestamp);
             })
             .addCase(getLink.rejected, (state, action) => {
                 state.status = true
@@ -102,5 +113,5 @@ const dataSlice = createSlice({
     },
 })
 
-export const {getJournalBySubject, setSubject, addReducer, updateReducer, editStatus} = dataSlice.actions
+export const {getJournalBySubject, setData, addReducer, updateReducer, editStatus} = dataSlice.actions
 export default dataSlice.reducer

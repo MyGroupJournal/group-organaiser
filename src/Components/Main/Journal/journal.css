@@ -2,5 +2,13 @@
   justify-content: center;
   align-items: center;
 }
+.journal__date {
+  text-align: center;
+  margin: 10px 0;
+  font-family: "PoppinsRegular", serif;
+  font-size: 18px;
+  opacity: 50%;
+  line-height: 20px;
+}
 
-/*# sourceMappingURL=journalMore.css.map */
+/*# sourceMappingURL=journal.css.map */

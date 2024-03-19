@@ -16,6 +16,7 @@ export default function Journal() {
     const statusJournal = useSelector(state => state.journal.status)
     const errorSchedule = useSelector(state => state.schedules.error)
     const errorJournal = useSelector(state => state.journal.error)
+    const date = useSelector(state => state.journal.date)
     const dispatch = useDispatch()
 
     function newSubject(e) {
@@ -41,12 +42,15 @@ export default function Journal() {
                     </div>
                     {groupName === 'group' || chosenSubj === 'subject' ?
                         <NotSelected text={`a subject ${groupName === 'group' ? 'and a group' : ''}`}/> : (
-                            <div className={'journal__list'}>
-                                <JournalList/>
-                            </div>
+                            <>
+                                <div className={'journal__list'}>
+                                    <JournalList/>
+                                </div>
+                                <h2 className={'journal__date'}>Data from {date} <br/> Updated once a week</h2>
+                            </>
                         )}
                 </>
-            )}
+                )}
         </div>
     )
 }

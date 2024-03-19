@@ -6,7 +6,7 @@ export const checkUserInput = createAsyncThunk(
     "user/checkUserInput",
     async function({login, password}, {rejectWithValue}){
         try {
-            const responce = await axios.get('https://65c9232ea4fbc162e112a614.mockapi.io/test/myJournal')
+            const responce = await axios.get('https://65b0e904d16d31d11bdd8e89.mockapi.io/journalAPI/secureData')
                 if (Object.keys(responce.data[0]).filter(key => key === login)[0] && responce.statusText === 'OK') {
                         const decrypted = decryptText(responce.data[0][login], '9857bc14-eb97-4fd4-9a40-34b073184545');
                         if(decrypted === password) {
