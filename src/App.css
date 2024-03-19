@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('./assets/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('./assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Slackey';
+    src: url('./assets/fonts/Slackey-Regular.ttf');
+}
+
+a{
+    text-decoration: none;
+}
+
+.journal, .schedule, .professors, .variantsBlock, .moderate, .group{
+  justify-content: center;
+  align-items: center;
+  width: clamp(20.938rem, 80vw + 1.938rem, 97.938rem);
+
+  background: rgba(217, 217, 217, 0.3);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: clamp(0.625rem, 0.935vw + 0.129rem, 1.25rem) clamp(0.5rem, 1.104vw + 0.238rem, 1.563rem);
+}

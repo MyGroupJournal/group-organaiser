@@ -1,0 +1,23 @@
+.logoutPage{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  [class^='logout__']{
+    font-family: 'PoppinsSemiBold', serif;
+    font-size: 36px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: clamp(1.625rem, 0.519vw + 1.502rem, 2.125rem) clamp(4.5rem, 0.909vw + 4.284rem, 5.375rem);
+    cursor:pointer;
+    color: white;
+  }
+  .logout__logout{
+    background: #E47B7B;
+  }
+  .logout__cancel{
+    background: #7BE495;
+  }
+}

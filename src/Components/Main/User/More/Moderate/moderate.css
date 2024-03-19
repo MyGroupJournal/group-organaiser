@@ -1,0 +1,12 @@
+.moderate__list {
+  margin-top: clamp(0.813rem, 2.857vw - 1.241rem, 2.188rem);
+}
+.moderate__list__title {
+  text-align: center;
+}
+
+.journal__button__div button:first-child {
+  margin-right: clamp(1.563rem, 0.649vw + 1.408rem, 2.188rem);
+}
+
+/*# sourceMappingURL=moderate.css.map */

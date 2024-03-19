@@ -1,0 +1,18 @@
+.student{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(10.625rem, 7.19vw + 8.873rem, 17.5rem);
+  p{
+    font-family: 'PoppinsMedium', serif;
+    font-size: clamp(1rem, 0.261vw + 0.936rem, 1.25rem);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  input{
+      width: clamp(1.75rem, -0.523vw + 1.877rem, 1.25rem);
+      height: clamp(1.75rem, -0.523vw + 1.877rem, 1.25rem);
+      margin-bottom: 2px;
+    cursor: pointer;
+  }
+}

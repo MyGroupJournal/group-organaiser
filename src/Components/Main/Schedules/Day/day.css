@@ -1,0 +1,57 @@
+.day {
+  background: linear-gradient(to right, rgba(232, 227, 227, 0.2), #66aaa9);
+  padding: clamp(0.813rem, 0.779vw + 0.627rem, 1.563rem) clamp(0.625rem, 0.39vw + 0.532rem, 1rem);
+  border-radius: 15px;
+  height: clamp(14rem, 8.182vw + 12.057rem, 21.875rem);
+  width: clamp(19.5rem, 11.558vw + 16.755rem, 30.625rem);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.19);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.day [class^=MuiDivider] {
+  border-color: #ffffff;
+  border-width: 1px;
+}
+.day__header__name {
+  font-size: clamp(1.75rem, 0.455vw + 1.642rem, 2.188rem);
+  font-family: "PoppinsSemiBold", serif;
+  text-align: center;
+}
+.day__subjects {
+  margin-top: clamp(0.875rem, 0.455vw + 0.767rem, 1.313rem);
+  font-family: "PoppinsRegular", serif;
+  font-size: clamp(1.125rem, 0.39vw + 1.032rem, 1.5rem);
+}
+.day__subjects__subject {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 14px;
+  border-radius: 15px;
+  background-color: #56C696;
+}
+.day__subjects__subject [class^=MuiDivider] {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 1px;
+  height: 17px;
+}
+.day__subjects__subject:not(:last-child) {
+  margin-bottom: 5px;
+}
+.day__subjects__subject .subject__place {
+  width: clamp(0.938rem, 0.584vw + 0.799rem, 1.5rem);
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+.day__subjects .green {
+  background-color: #587b46;
+}
+.day__subjects .red {
+  background-color: #c43c3c;
+}
+
+.today {
+  border: 3px solid rgba(194, 0, 0, 0.6901960784);
+}
+
+/*# sourceMappingURL=day.css.map */

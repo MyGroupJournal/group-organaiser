@@ -1,0 +1,50 @@
+.month {
+  width: 100%;
+  margin-bottom: clamp(1.625rem, -0.065vw + 1.641rem, 1.563rem);
+
+  &__topDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(123, 228, 149, 0.85);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+    cursor: pointer;
+    padding: 10px clamp(0.625rem, 1.438vw + 0.275rem, 2rem);
+
+    &__monthName {
+      text-align: left;
+      font-family: 'PoppinsBold', serif;
+      font-size: clamp(1.25rem, 0.261vw + 1.186rem, 1.5rem);
+    }
+  }
+
+  &__dates {
+    display: none;
+    font-family: 'PoppinsMedium', serif;
+    font-size: clamp(0.75rem, 0.131vw + 0.718rem, 0.875rem);
+    font-weight: 500;
+    padding: 10px clamp(1.25rem, 0.654vw + 1.091rem, 1.875rem);
+    border-radius: 8px;
+    margin-top: 5px;
+    background: rgba(217, 217, 217, 0.20);
+    transition: 2s all ease-in-out;
+
+    &__date {
+      border-radius: 8px;
+      background: #56C696;
+      padding: 6px clamp(0.625rem, 0.654vw + 0.466rem, 1.25rem);
+      border: none;
+      color: white;
+      margin-bottom: 5px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+

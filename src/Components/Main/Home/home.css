@@ -1,0 +1,22 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.938rem, 0.649vw + 0.783rem, 1.563rem);
+}
+.home .block__withButtons {
+  display: flex;
+  gap: clamp(0.938rem, 0.649vw + 0.783rem, 1.563rem);
+  width: clamp(22.875rem, 77.987vw + 4.353rem, 97.938rem);
+}
+.home .block__withButtons .block__professorsAndSchedule {
+  display: flex;
+  gap: clamp(0.938rem, 0.649vw + 0.783rem, 1.563rem);
+  width: calc(clamp(22.875rem, 77.987vw + 4.353rem, 97.938rem) * 3 / 4);
+}
+@media screen and (max-width: 1250px) {
+  .home .block__withButtons .block__professorsAndSchedule {
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

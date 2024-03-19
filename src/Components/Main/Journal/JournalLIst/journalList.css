@@ -1,0 +1,97 @@
+.journal__list {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(0.813rem, 2.857vw - 1.241rem, 2.188rem);
+  width: 100%;
+  height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.journal__list .journal__table {
+  font-family: "PoppinsMedium", serif;
+  font-size: clamp(1rem, 0.519vw + 0.877rem, 1.5rem);
+  text-align: center;
+}
+.journal__list .journal__table [class^=MuiDivider] {
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.3803921569);
+  border-width: 1px;
+  height: 24px;
+  width: 0;
+}
+.journal__list .journal__table .students {
+  width: clamp(9.063rem, 10.065vw + 6.672rem, 18.75rem);
+}
+.journal__list .journal__table .students__table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+.journal__list .journal__table .students__table tr {
+  background-color: #56C696;
+}
+.journal__list .journal__table .students__table tr td:first-child {
+  border-radius: 15px 0 0 15px;
+}
+.journal__list .journal__table .students__table__head {
+  background-color: #56C696;
+}
+.journal__list .journal__table .students__table__head td {
+  padding: 8px clamp(0.875rem, 1.169vw + 0.597rem, 2rem);
+  font-family: "PoppinsBold", serif;
+}
+.journal__list .journal__table .students__table__head td:first-child {
+  padding-right: clamp(0.438rem, 0.065vw + 0.422rem, 0.5rem);
+}
+.journal__list .journal__table .students__table__head td:nth-child(2), .journal__list .journal__table .students__table__head td:last-child {
+  padding: 0;
+}
+.journal__list .journal__table .students__table__head td:nth-child(3) {
+  padding: 8px clamp(1.75rem, 3.182vw + 0.994rem, 4.813rem);
+}
+.journal__list .journal__table .students__table__body__student {
+  background-color: #56C696;
+}
+.journal__list .journal__table .missed {
+  width: clamp(9.125rem, 65.325vw - 6.39rem, 72rem);
+  transform: translateX(-8px);
+}
+.journal__list .journal__table .missed__div {
+  height: 100%;
+  width: inherit;
+  overflow: auto;
+  overflow-y: hidden;
+  position: fixed;
+  scroll-behavior: smooth;
+  top: 0;
+  transform: rotateZ(180deg);
+  direction: rtl;
+}
+.journal__list .journal__table .missed__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  transform: rotateZ(-180deg);
+  direction: ltr;
+}
+.journal__list .journal__table .missed__table td:nth-child(even) {
+  padding: 0;
+}
+.journal__list .journal__table .missed__table td:nth-last-child(1) [class^=MuiDivider] {
+  display: none;
+}
+.journal__list .journal__table .missed__table td:nth-last-child(2) {
+  border-radius: 0 15px 15px 0;
+}
+.journal__list .journal__table .missed__table__head {
+  background-color: #56C696;
+}
+.journal__list .journal__table .missed__table__head td {
+  padding: 8px clamp(0.875rem, 1.169vw + 0.597rem, 2rem);
+  font-family: "PoppinsBold", serif;
+}
+.journal__list .journal__table .missed__table__body tr {
+  background-color: #56C696;
+}
+
+/*# sourceMappingURL=journalList.css.map */

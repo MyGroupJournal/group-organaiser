@@ -1,0 +1,130 @@
+$centreMainWidth: clamp(6.438rem, 63.506vw - 8.645rem, 67.563rem);
+
+.journal__list {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(0.813rem, 2.857vw - 1.241rem, 2.188rem);
+  width: 100%;
+  //height: clamp(35.125rem, 10vw + 32.75rem, 44.75rem);
+  height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+.journal__table {
+  font-family: 'PoppinsMedium', serif;
+  font-size: clamp(1rem, 0.519vw + 0.877rem, 1.5rem);
+  text-align: center;
+
+  [class^='MuiDivider'] {
+    margin: 0;
+    border-color: #ffffff61;
+    border-width: 1px;
+    height: 24px;
+    width: 0;
+  }
+
+  .students {
+    width: clamp(9.063rem, 10.065vw + 6.672rem, 18.75rem);
+
+    &__table {
+      border-collapse: separate;
+      border-spacing: 0 8px;
+
+      tr {
+        background-color: #56C696;
+        td {
+          &:first-child {
+            border-radius: 15px 0 0 15px;
+          }
+        }
+      }
+
+
+      &__head {
+        background-color: #56C696;
+
+
+        td {
+          padding: 8px clamp(0.875rem, 1.169vw + 0.597rem, 2rem);
+          font-family: 'PoppinsBold', serif;
+
+          &:first-child {
+            padding-right: clamp(0.438rem, 0.065vw + 0.422rem, 0.5rem);
+          }
+
+          &:nth-child(2), &:last-child {
+            padding: 0;
+          }
+
+          &:nth-child(3) {
+            padding: 8px clamp(1.75rem, 3.182vw + 0.994rem, 4.813rem);
+          }
+        }
+      }
+
+      &__body {
+        &__student {
+          background-color: #56C696;
+        }
+      }
+    }
+  }
+
+  .missed {
+    width: clamp(9.125rem, 65.325vw - 6.39rem, 72rem);
+    transform: translateX(-8px);
+
+    &__div {
+      height: 100%;
+      width: inherit;
+      overflow: auto;
+      overflow-y: hidden;
+      position: fixed;
+      scroll-behavior: smooth;
+      top: 0;
+      transform: rotateZ(180deg);
+      direction: rtl;
+    }
+
+    &__table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+      transform: rotateZ(-180deg);
+      direction: ltr;
+
+      td {
+        &:nth-child(even) {
+          padding: 0;
+        }
+
+        &:nth-last-child(1) {
+          [class^='MuiDivider'] {
+            display: none;
+          }
+        }
+
+        &:nth-last-child(2) {
+          border-radius: 0 15px 15px 0;
+        }
+      }
+
+      &__head {
+        background-color: #56C696;
+
+        td {
+          padding: 8px clamp(0.875rem, 1.169vw + 0.597rem, 2rem);
+          font-family: 'PoppinsBold', serif;
+        }
+      }
+
+      &__body {
+        tr {
+          background-color: #56C696;
+        }
+      }
+    }
+  }
+}
+}

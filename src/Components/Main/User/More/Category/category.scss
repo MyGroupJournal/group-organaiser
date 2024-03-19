@@ -1,0 +1,15 @@
+.variantsBlock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  &__variants{
+    height: 70vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+}

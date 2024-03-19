@@ -1,0 +1,180 @@
+[class^=block__wrapper-], [class^=block-] {
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.75);
+}
+
+[class^=block__wrapper-], [class^=block-], [class^=block__inner-], [class^=block__inner__inner-] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+[class^=block__inner-] {
+  background-color: rgb(123, 228, 149);
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+}
+
+[class^=block__inner__inner-] {
+  border-radius: 15px;
+  background-color: rgba(86, 198, 150, 0.3);
+  -webkit-box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.75);
+}
+
+[class^=block__inner__inner__text-] {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "PoppinsSemiBold", serif;
+  font-size: clamp(1.188rem, 1.883vw + 0.74rem, 3rem);
+  color: white;
+  text-transform: uppercase;
+}
+
+.block-journal {
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(170, 229, 185, 0.3333333333) 25%, transparent 25%) -19px 0/38px 38px, linear-gradient(225deg, #AAE5B9 25%, transparent 25%) -19px 0/38px 38px, linear-gradient(315deg, rgba(170, 229, 185, 0.3333333333) 25%, transparent 25%) 0px 0/38px 38px, linear-gradient(45deg, #AAE5B9 25%, #ffffff 25%) 0px 0/38px 38px;
+}
+
+.block-journal, .block__wrapper-journal {
+  width: calc(clamp(22.875rem, 77.987vw + 4.353rem, 97.938rem) * 1 / 4);
+}
+
+.block__inner-journal {
+  width: clamp(4.813rem, 5.909vw + 3.409rem, 10.5rem);
+  height: clamp(19.688rem, 9.286vw + 17.482rem, 28.625rem);
+}
+
+.block__inner__inner-journal {
+  width: clamp(3.75rem, 2.597vw + 3.133rem, 6.25rem);
+  height: clamp(16.813rem, 9.286vw + 14.607rem, 25.75rem);
+}
+.block__inner__inner-journal .block__inner__inner__text-journal {
+  font-size: clamp(1.75rem, 1.299vw + 1.442rem, 3rem);
+  line-height: 1.2;
+}
+.block__inner__inner-journal .block__inner__inner__text-journal::before {
+  content: "J" "\a" "O" "\a" "U" "\a" "R" "\a" "N" "\a" "A" "\a" "L";
+  white-space: pre;
+}
+
+.block__wrapper-professors, .block-professors {
+  justify-content: flex-end;
+  height: 70vh;
+  width: 50%;
+}
+@media screen and (max-width: 1250px) {
+  .block__wrapper-professors, .block-professors {
+    height: 35vh;
+    width: 100%;
+  }
+}
+
+.block-professors {
+  opacity: 0.8;
+  width: 100%;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 25px), repeating-linear-gradient(rgba(170, 229, 185, 0.3333333333), #AAE5B9);
+}
+
+.block__inner-professors {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: clamp(2.188rem, 7.597vw + 0.383rem, 9.5rem);
+  width: 100%;
+  box-shadow: 0 clamp(-0.25rem, -0.26vw - 0.188rem, -0.5rem) 15px clamp(0rem, 0.26vw - 0.062rem, 0.25rem) rgba(0, 0, 0, 0.75);
+}
+
+.block__inner__inner-professors {
+  width: clamp(8.625rem, 22.403vw + 3.304rem, 30.188rem);
+  height: clamp(1.25rem, 6.169vw - 0.215rem, 7.188rem);
+  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.75);
+}
+
+.block__wrapper-schedule, .block-schedule {
+  justify-content: flex-start;
+  height: 70vh;
+  width: 50%;
+}
+@media screen and (max-width: 1250px) {
+  .block__wrapper-schedule, .block-schedule {
+    height: 35vh;
+    width: 100%;
+  }
+}
+
+.block-schedule {
+  opacity: 0.8;
+  width: 100%;
+  background-image: linear-gradient(45deg, #AAE5B9 50%, #ffffff 50%);
+  background-size: 11px 11px;
+}
+
+.block__inner-schedule {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: clamp(2.188rem, 7.597vw + 0.383rem, 9.5rem);
+  width: 100%;
+  box-shadow: 0 8px 15px 4px rgba(0, 0, 0, 0.75);
+}
+
+.block__inner__inner-schedule {
+  width: clamp(8.625rem, 22.403vw + 3.304rem, 30.188rem);
+  height: clamp(1.25rem, 6.169vw - 0.215rem, 7.188rem);
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.75);
+}
+
+.block-week {
+  opacity: 0.8;
+  background-image: linear-gradient(30deg, #BBEAC7 12%, transparent 12.5%, transparent 87%, #BBEAC7 87.5%, #BBEAC7), linear-gradient(150deg, #BBEAC7 12%, transparent 12.5%, transparent 87%, #BBEAC7 87.5%, #BBEAC7), linear-gradient(30deg, #BBEAC7 12%, transparent 12.5%, transparent 87%, #BBEAC7 87.5%, #BBEAC7), linear-gradient(150deg, #BBEAC7 12%, transparent 12.5%, transparent 87%, #BBEAC7 87.5%, #BBEAC7), linear-gradient(60deg, rgba(187, 234, 199, 0.4666666667) 25%, transparent 25.5%, transparent 75%, rgba(187, 234, 199, 0.4666666667) 75%, rgba(187, 234, 199, 0.4666666667)), linear-gradient(60deg, rgba(187, 234, 199, 0.4666666667) 25%, transparent 25.5%, transparent 75%, rgba(187, 234, 199, 0.4666666667) 75%, rgba(187, 234, 199, 0.4666666667));
+  background-size: 42px 74px;
+  background-position: 0 0, 0 0, 21px 37px, 21px 37px, 0 0, 21px 37px;
+}
+
+.block__wrapper-week, .block-week {
+  pointer-events: none;
+  height: clamp(4.188rem, 11.299vw + 1.504rem, 15.063rem);
+  width: clamp(22.875rem, 77.987vw + 4.353rem, 97.938rem);
+}
+
+.block__wrapper-week, .block-week {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.block__inner-week {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: clamp(4.188rem, 11.299vw + 1.504rem, 15.063rem);
+  width: clamp(6rem, 25.779vw - 0.123rem, 30.813rem);
+  box-shadow: -5px 0 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.block__inner__inner-week {
+  width: clamp(5.188rem, 22.987vw - 0.272rem, 27.313rem);
+  height: clamp(3.563rem, 7.208vw + 1.851rem, 10.5rem);
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.75);
+}
+.block__inner__inner-week .block__inner__inner__text-week {
+  display: ruby;
+  font-size: clamp(1.25rem, 1.83vw + 0.804rem, 3rem);
+  line-height: clamp(1.875rem, 0.654vw + 1.716rem, 2.5rem);
+  text-transform: none;
+}
+.block__inner__inner-week .block__inner__inner__text-week .block__inner__inner__text-week-span {
+  color: red;
+}
+
+/*# sourceMappingURL=blockCreator.css.map */

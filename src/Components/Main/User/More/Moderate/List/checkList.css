@@ -1,0 +1,39 @@
+.checkList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: clamp(0.813rem, 2.857vw - 1.241rem, 2.188rem);
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+.checkList__students {
+  height: clamp(26.25rem, 10.714vw + 23.705rem, 36.563rem);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.checkList__students::-webkit-scrollbar {
+  display: none;
+}
+.checkList__confirm__button {
+  background: rgba(123, 228, 149, 0.8509803922);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2509803922);
+  color: #fff;
+  cursor: pointer;
+  font-family: PoppinsMedium, serif;
+  font-size: clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+  font-weight: 500;
+  margin-bottom: 24px;
+  min-width: 280px;
+  padding: 8.5px;
+  text-align: center;
+  transition: all 500ms ease-in-out;
+  width: clamp(9.375rem, 11.111vw + 6.667rem, 20rem);
+}
+.checkList__confirm__button:hover {
+  background-color: #1b7d62;
+}
+
+/*# sourceMappingURL=checkList.css.map */

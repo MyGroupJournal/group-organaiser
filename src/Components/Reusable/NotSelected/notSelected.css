@@ -1,0 +1,25 @@
+.parIsNotSelected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.parIsNotSelected__img {
+  opacity: 10%;
+  width: clamp(18.625rem, 20vw + 13.875rem, 37.875rem);
+}
+.parIsNotSelected__text {
+  font-size: clamp(2.25rem, 1.169vw + 1.972rem, 3.375rem);
+  font-family: "PoppinsSemiBold", serif;
+  width: clamp(19.5rem, 20.909vw + 14.534rem, 39.625rem);
+  text-align: center;
+  line-height: 47px;
+  margin: clamp(3.125rem, 0.325vw + 3.048rem, 3.438rem) 0;
+}
+@media only screen and (max-width: 950px) {
+  .parIsNotSelected__img {
+    margin-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=notSelected.css.map */

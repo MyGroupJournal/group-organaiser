@@ -1,0 +1,67 @@
+.blackout {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blackout .missing {
+  border-radius: 10px;
+  border: 2px solid #FFF;
+  background: #329D9C;
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  .blackout .missing {
+    width: 90%;
+  }
+}
+.blackout .missing__close {
+  position: absolute;
+  cursor: pointer;
+  top: 2%;
+  left: 92%;
+}
+.blackout .missing__head {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.22);
+}
+.blackout .missing__head__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "PoppinsSemiBold", serif;
+  font-size: clamp(1.375rem, 0.261vw + 1.311rem, 1.625rem);
+  font-weight: 600;
+  margin: clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) 10px clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+}
+.blackout .missing__main {
+  margin: 10px clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+}
+.blackout .missing__main__subject {
+  color: #FFF;
+  font-family: "PoppinsMedium", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+.blackout .missing__main__students {
+  margin: 2px 0 0 clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+  color: #FFF;
+  font-family: "PoppinsRegular", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.blackout .missing__main__ul {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.blackout .missing__main__ul::-webkit-scrollbar {
+  display: none;
+}
+.blackout .missing__main__ul__missedLi {
+  margin: 0 clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) 12px clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+}
+
+/*# sourceMappingURL=blackout.css.map */

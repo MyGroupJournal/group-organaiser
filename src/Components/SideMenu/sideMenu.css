@@ -1,0 +1,220 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(217, 217, 217, 0.3);
+  height: 100vh;
+  width: clamp(10rem, 12.09vw + 0.555rem, 15.063rem);
+  padding: 50px 0 196px 0;
+}
+.header [class^=MuiButton] {
+  font-size: clamp(0.875rem, 0.412vw + 0.63rem, 1.125rem);
+  white-space: nowrap;
+}
+.header .nav__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+}
+.header .nav__logo .logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.header .nav__logo .logoDiv .logo__name {
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Slackey", serif;
+  margin-left: 4px;
+}
+.header .hamb {
+  display: none;
+  grid-area: hamburger;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  float: right;
+  font-family: "PoppinsMedium", serif;
+  font-size: 18px;
+}
+.header .hamb__line {
+  background: white;
+  display: block;
+  height: 4px;
+  position: relative;
+  width: 24px;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+.header .hamb__line::before,
+.header .hamb__line::after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  border-radius: 15px;
+}
+.header .hamb__line::before {
+  top: 8px;
+}
+.header .hamb__line::after {
+  top: -8px;
+}
+.header .side__menu {
+  display: none;
+}
+.header .side__menu:checked ~ .nav {
+  min-height: 80vh;
+}
+.header .side__menu:checked ~ .nav .nav__categories, .header .side__menu:checked ~ .nav .nav__button-group, .header .side__menu:checked ~ .nav .nav__account {
+  display: block;
+}
+.header .side__menu:checked ~ .hamb .hamb__line {
+  background: transparent;
+}
+.header .side__menu:checked ~ .hamb .hamb__line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .side__menu:checked ~ .hamb .hamb__line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.header .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
+  grid-area: nav;
+}
+.header .nav .nav__categories {
+  margin-top: 50px;
+}
+.header .nav .nav__categories .category__link {
+  display: flex;
+  align-items: center;
+}
+.header .nav .nav__categories .category__link__name {
+  font-size: 18px;
+  font-family: "PoppinsMedium", serif;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all ease-in-out 400ms;
+  display: flex;
+  align-items: center;
+}
+.header .nav .nav__categories .category__link__name__title {
+  margin-left: 10px;
+}
+.header .nav .nav__categories .category__link .active {
+  font-family: "PoppinsBold", serif;
+  color: rgb(255, 255, 255);
+}
+.header .nav .nav__categories .category__link:not(:last-child) {
+  margin-bottom: 35px;
+}
+.header .nav .nav__button-group {
+  margin: 50px 0;
+}
+.header .nav .nav__account {
+  transform: translateX(-5px);
+}
+.header .nav .nav__account .more {
+  margin-bottom: 15px;
+}
+.header .nav .nav__account .account__userOption__link {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  font-family: "PoppinsMedium", serif;
+}
+.header .nav .nav__account .account__userOption__link__title {
+  transition: all ease-in-out 400ms;
+  margin-left: 10px;
+}
+.header .nav .nav__account .active {
+  font-family: "PoppinsBold", serif;
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 1650px) {
+  .header .nav__logo {
+    scale: 0.9;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .header .nav__logo {
+    scale: 0.8;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .header .logo__name {
+    display: none;
+  }
+  .header {
+    width: auto;
+  }
+  .header [class$=__link] p {
+    display: none;
+  }
+  .header [class^=MuiButton] {
+    margin: 0 7px;
+    padding: clamp(0.313rem, 0.139vw + 0.208rem, 0.375rem) 0;
+    padding-right: 2px;
+    padding-left: 5px;
+  }
+  .header .active p {
+    display: none;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .header {
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+    background-color: transparent;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-areas: "logo hamburger" "nav nav";
+  }
+  .header .nav {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+  .header .nav__categories, .header .nav__button-group, .header .nav__account {
+    display: none;
+  }
+  .header .hamb {
+    display: flex;
+  }
+  .header [class$=__link] p {
+    display: inline;
+  }
+  .header [class^=MuiButton] {
+    margin: 0;
+    padding: 6px 16px;
+    font-size: 17px;
+  }
+  .header .nav__logo {
+    width: 100%;
+    justify-content: space-evenly;
+    scale: 1;
+  }
+  .header .nav__logo .logo__name {
+    display: inline;
+  }
+  .header .active p {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=sideMenu.css.map */

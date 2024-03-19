@@ -1,0 +1,277 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(217, 217, 217, 0.3);
+  height: 100vh;
+  width: clamp(10rem, 12.09vw + 0.555rem, 15.063rem);
+  padding: 50px 0 196px 0;
+
+  [class^='MuiButton'] {
+    font-size: clamp(0.875rem, 0.412vw + 0.63rem, 1.125rem);
+    white-space: nowrap;
+  }
+
+  .nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: logo;
+
+    .logoDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+
+      .logo__name {
+        font-size: 26px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Slackey', serif;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .hamb {
+    display: none;
+    grid-area: hamburger;
+
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    float: right;
+    font-family: 'PoppinsMedium', serif;
+    font-size: 18px;
+  }
+
+  .hamb__line {
+    background: white;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 24px;
+    border-radius: 15px;
+    margin-left: 15px;
+  }
+
+  .hamb__line::before,
+  .hamb__line::after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .hamb__line::before {
+    top: 8px;
+  }
+
+  .hamb__line::after {
+    top: -8px;
+  }
+
+  .side__menu {
+    display: none;
+  }
+
+  .side__menu:checked ~ .nav {
+    min-height: 80vh;
+
+    .nav__categories, .nav__button-group, .nav__account {
+      display: block;
+    }
+  }
+
+  .side__menu:checked ~ .hamb .hamb__line {
+    background: transparent;
+  }
+
+  .side__menu:checked ~ .hamb .hamb__line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .side__menu:checked ~ .hamb .hamb__line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    grid-area: nav;
+
+
+    .nav__categories {
+      margin-top: 50px;
+
+      .category__link {
+        display: flex;
+        align-items: center;
+
+        &__name {
+          font-size: 18px;
+          font-family: 'PoppinsMedium', serif;
+          color: rgba(255, 255, 255, 0.6);
+          transition: all ease-in-out 400ms;
+          display: flex;
+          align-items: center;
+
+          &__title {
+            margin-left: 10px;
+          }
+        }
+
+        .active {
+          font-family: 'PoppinsBold', serif;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 35px;
+        }
+      }
+    }
+
+    .nav__button-group {
+      margin: 50px 0;
+    }
+
+    .nav__account {
+      transform: translateX(-5px);
+
+      .more{
+        margin-bottom: 15px;
+      }
+
+      .account__userOption__link {
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 18px;
+        font-family: 'PoppinsMedium', serif;
+
+        &__title {
+          transition: all ease-in-out 400ms;
+          margin-left: 10px;
+        }
+      }
+
+      .active {
+        font-family: 'PoppinsBold', serif;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1650px) {
+    .nav__logo {
+      scale: 0.9;
+    }
+  }
+
+  @media only screen and (max-width: 1350px) {
+    .nav__logo {
+      scale: 0.8;
+    }
+  }
+
+  @media only screen and (max-width: 1150px) {
+    .logo__name {
+      display: none;
+    }
+    & {
+      width: auto;
+    }
+    [class$="__link"] {
+      p {
+        display: none;
+      }
+    }
+
+    [class^='MuiButton'] {
+      margin: 0 7px;
+      padding: clamp(0.313rem, 0.139vw + 0.208rem, 0.375rem) 0;
+      padding: {
+        right: 2px;
+        left: 5px;
+      };
+    }
+
+    .active{
+      p{
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    & {
+      width: 100%;
+      height: fit-content;
+      padding: 20px 0;
+      background-color: transparent;
+      justify-items: center;
+      align-items: center;
+      display: grid;
+      grid-template-columns:  1fr 0.8fr;
+      grid-template-areas:
+              "logo hamburger"
+              "nav nav";
+
+      .nav {
+        max-height: 0;
+        transition: max-height .5s ease-out;
+
+        &__categories, &__button-group, &__account {
+          display: none;
+        }
+      }
+
+      .hamb {
+        display: flex;
+
+      }
+
+      [class$="__link"] {
+        p {
+          display: inline;
+        }
+      }
+
+
+      [class^='MuiButton'] {
+        margin: 0;
+        padding: 6px 16px;
+        font-size: 17px;
+      }
+
+      .nav__logo {
+
+        width: 100%;
+        justify-content: space-evenly;
+        scale: 1;
+
+        .logo__name {
+          display: inline;
+        }
+      }
+      .active{
+        p{
+          display: block;
+        };
+      }
+    }
+  }
+}
+

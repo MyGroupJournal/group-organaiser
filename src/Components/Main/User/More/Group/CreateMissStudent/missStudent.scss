@@ -1,0 +1,49 @@
+.group {
+  &__head {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.22);
+
+    &__title {
+      color: #FFF;
+      text-align: center;
+      font-family: 'PoppinsSemiBold', serif;
+      font-size: clamp(1.375rem, 0.261vw + 1.311rem, 1.625rem);
+      font-weight: 600;
+      margin: clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) 10px clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+    }
+  }
+
+  &__main {
+    margin: 10px clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+
+    &__subject {
+      color: #FFF;
+      font-family: 'PoppinsMedium', serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    &__dates {
+
+      margin: 2px 0 0 clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+      color: #FFF;
+      font-family: 'PoppinsRegular', serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__ul {
+      overflow: hidden;
+      overflow-y: auto;
+      max-height: 300px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &__missedLi {
+        margin: 0 clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem) 12px clamp(0.938rem, 0.327vw + 0.858rem, 1.25rem);
+      }
+    }
+
+  }
+}
